@@ -1,6 +1,17 @@
 .hi {
     font-size: 900px;
     text-align: center;
+    color: red;
+    animation: rainbow-hue 3s linear infinite;
+}
+
+@keyframes rainbow-hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 .below-hi {
@@ -25,7 +36,7 @@
     text-align: center;
 }
 
-button {
+.good-button {
     font-size: 100px;
     color: white;
     padding: 20px;
@@ -33,12 +44,40 @@ button {
     background-color: orangered;
 }
 
-button img {
+.good-button:active {
+    color:green;
+}
+
+.good-button img {
     display: none;
     margin-top: -950px;
 }
 
-button:active img {
+.good-button:active img {
+    display: block;
+    width: 800px;
+    height: 1000px;
+    justify-self: center;
+}
+
+.bad-button {
+    font-size: 100px;
+    color: white;
+    padding: 20px;
+    margin-bottom: 100px;
+    background-color: cornflowerblue;
+}
+
+.bad-button:active {
+    color:red;
+}
+
+.bad-button img {
+    display: none;
+    margin-top: -950px;
+}
+
+.bad-button:active img {
     display: block;
     width: 800px;
     height: 1000px;
